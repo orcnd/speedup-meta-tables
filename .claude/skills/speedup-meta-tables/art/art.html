@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+	/*
+	 * Concept: the meta table is a tall pile of thin key/value rows, one per field of every object. The plugin turns
+	 * the fields a query needs into one wide, short table: one row per object, one column per field.
+	 * Left half of the picture: the tall pile (grey). Right half: the narrow table (blue), header row named.
+	 * Colors: ink #0f1b2d background, blue #338ced for what the plugin builds, grey for the meta rows.
+	 */
+	* { box-sizing: border-box; margin: 0; padding: 0; }
+	body { background: #fff; font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; }
+	#banner { width: 772px; height: 250px; overflow: hidden; }
+	#icon { width: 256px; height: 256px; margin-top: 30px; }
+	svg { display: block; }
+</style>
+</head>
+<body>
+<div id="banner"></div>
+<div id="icon"></div>
+<script>
+const C = { bg: '#0f1b2d', grey: '#3a4658', grey2: '#526074', blue: '#338ced', blue2: '#1f5fa8', text: '#f3f6fa', soft: '#9fb0c6' };
+
+// The tall pile of meta rows: [object, key, value] per row, drawn as thin bars in three columns.
+function pile(x, y, rows, rh, w) {
+	let s = '';
+	for (let i = 0; i < rows; i++) {
+		const yy = y + i * rh;
+		const k = (i * 37) % 5;
+		s += `<rect x="${x}" y="${yy}" width="${w * 0.18}" height="${rh - 3}" rx="1.5" fill="${C.grey}"/>`;
+		s += `<rect x="${x + w * 0.22}" y="${yy}" width="${w * (0.26 + k * 0.03)}" height="${rh - 3}" rx="1.5" fill="${C.grey2}"/>`;
+		s += `<rect x="${x + w * 0.62}" y="${yy}" width="${w * (0.18 + ((i * 11) % 4) * 0.05)}" height="${rh - 3}" rx="1.5" fill="${C.grey}"/>`;
+	}
+	return s;
+}
+
+// The narrow table: a header row and a few rows, each split into columns.
+function table(x, y, cols, rows, cw, rh) {
+	let s = '';
+	for (let c = 0; c < cols; c++) {
+		s += `<rect x="${x + c * cw}" y="${y}" width="${cw - 4}" height="${rh}" rx="3" fill="${C.blue}"/>`;
+	}
+	for (let r = 1; r <= rows; r++) {
+		for (let c = 0; c < cols; c++) {
+			const fill = c === 0 ? C.blue2 : '#1b3352';
+			s += `<rect x="${x + c * cw}" y="${y + r * (rh + 4)}" width="${cw - 4}" height="${rh}" rx="3" fill="${fill}"/>`;
+		}
+	}
+	return s;
+}
+
+let b = `<svg width="772" height="250" viewBox="0 0 772 250" xmlns="http://www.w3.org/2000/svg">
+	<rect width="772" height="250" fill="${C.bg}"/>
+	<text x="36" y="96" font-size="44" font-weight="700" fill="${C.text}" letter-spacing="-0.5">SpeedUp</text>
+	<text x="36" y="144" font-size="44" font-weight="700" fill="${C.text}" letter-spacing="-0.5">Meta Tables</text>
+	<text x="38" y="182" font-size="16" fill="${C.soft}">Slow meta queries, answered from</text>
+	<text x="38" y="204" font-size="16" fill="${C.soft}">narrow tables it builds on its own.</text>
+	<g>${pile(420, 18, 21, 10.5, 110)}</g>
+	<path d="M548 125 H586" stroke="${C.soft}" stroke-width="2.5" fill="none"/>
+	<path d="M580 118 L590 125 L580 132" stroke="${C.soft}" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+	<g>${table(604, 72, 4, 4, 38, 17)}</g>
+</svg>`;
+document.getElementById('banner').innerHTML = b;
+
+let i = `<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+	<rect width="256" height="256" fill="${C.bg}"/>
+	<g>${table(40, 52, 4, 5, 46, 22)}</g>
+</svg>`;
+document.getElementById('icon').innerHTML = i;
+// ?2 renders at twice the size (1544x500 banner), ?half at half (128 icon).
+document.body.style.zoom = { '?2': 2, '?half': 0.5 }[location.search] || 1;
+</script>
+</body>
+</html>

@@ -176,6 +176,7 @@ class SpeedUp_Meta_Tables {
 			'CREATE TABLE IF NOT EXISTS %i (ent varchar(8) NOT NULL, object_id bigint unsigned NOT NULL, seq bigint unsigned NOT NULL, PRIMARY KEY (ent, object_id)) ENGINE=InnoDB' => 'queue',
 			'CREATE TABLE IF NOT EXISTS %i (tab varchar(64) NOT NULL, k smallint NOT NULL, miss tinyint NOT NULL, val varchar(191) NOT NULL, st varchar(20) NOT NULL, ty varchar(20) NOT NULL, cnt bigint NOT NULL, PRIMARY KEY (tab, k, miss, val, st, ty)) ENGINE=InnoDB COLLATE ' . $cc_val => 'counts',
 			'CREATE TABLE IF NOT EXISTS %i (tab varchar(64) NOT NULL, meta_key varchar(191) NOT NULL, PRIMARY KEY (tab, meta_key)) ENGINE=InnoDB COLLATE ' . $cc_key => 'keys',
+			'CREATE TABLE IF NOT EXISTS %i (k varchar(32) NOT NULL PRIMARY KEY, v longtext NOT NULL) ENGINE=InnoDB' => 'registry',
 			'CREATE TABLE IF NOT EXISTS %i (hash char(32) NOT NULL PRIMARY KEY, ent varchar(8) NOT NULL, types varchar(191) NOT NULL, shape mediumtext NOT NULL, hits bigint unsigned NOT NULL DEFAULT 0, lit text NOT NULL, varies tinyint NOT NULL DEFAULT 0, first_seen datetime NOT NULL, last_seen datetime NOT NULL) ENGINE=InnoDB' => 'shapes',
 		);
 		foreach ( $sql as $q => $name ) {

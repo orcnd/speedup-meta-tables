@@ -1,10 +1,10 @@
 === SpeedUp Meta Tables ===
 Contributors: orcnd
-Tags: performance, postmeta, woocommerce, meta query, database
+Tags: performance, postmeta, woocommerce, custom fields, database
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 0.1.0
+Stable tag: 0.1.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,7 +24,7 @@ What it does not do:
 
 When it is not sure, for example SQL it cannot read, a write it could not follow, or a table being rebuilt, the query goes to WordPress unchanged.
 
-On the benchmark site (25,000 products, 48,000 customers, 60,000 orders) the meta SQL of 39 admin screens went from 99 ms to 0.66 ms at the median, and all 13 pages that took over a second dropped below one. The full results, the method and the scripts are in the GitHub repository.
+On the benchmark site (25,000 products, 48,000 customers, 60,000 orders) the meta SQL of 39 admin screens went from 99 ms to 0.66 ms at the median, and all 13 pages that took over a second dropped below one. The full results, the method and the scripts are on GitHub: https://github.com/orcnd/speedup-meta-tables
 
 = Requirements =
 
@@ -62,7 +62,15 @@ Yes. `$wpdb->last_query` and Query Monitor show the SQL the plugin ran instead. 
 
 Add a filter: `add_filter( 'speedup_meta_tables_enabled', '__return_false' );` from a plugin or a mu-plugin. Writes are still noted, so the tables stay correct.
 
+== Screenshots ==
+
+1. Tools > SpeedUp Meta Tables on a test store after the plugin built its tables: the state, the buttons, and the tables with the fields each one holds.
+2. The query patterns it recorded. Values and search terms are not stored, only which fields, operators and sort a query uses.
+
 == Changelog ==
 
+= 0.1.1 =
+* The table definitions are kept in the plugin's own table; the autoloaded copy is written only through the Options API.
+
 = 0.1.0 =
-* First release.
+* First release, on GitHub.

@@ -231,21 +231,33 @@ class SpeedUp_Meta_Tables_Engine {
 	/* ---- registry ---- */
 
 	/**
-	 * Loads the registry from the option, or straight from the database when $direct is set.
+	 * Set when the registry option (a cache of the registry table) is older than what this engine loaded.
 	 *
-	 * @param bool $direct Bypass the option cache.
+	 * @var bool
+	 */
+	public $stale_option = false;
+
+	/**
+	 * Loads the registry from its autoloaded option, or from the plugin's registry table when $direct is set.
+	 *
+	 * @param bool $direct Read the registry table instead of the option.
 	 * @return self
 	 */
 	public function load( bool $direct = false ): self {
 		$r = null;
 		if ( $direct ) {
-			$x = $this->m->query( 'SELECT option_value FROM ' . $this->wp . "options WHERE option_name='" . SpeedUp_Meta_Tables::REGISTRY . "'" );
+			$x = $this->m->query( 'SELECT v FROM ' . $this->pre . "registry WHERE k='main'" );
 			$x = $x ? $x->fetch_row() : null;
-			$r = $x ? maybe_unserialize( $x[0] ) : null;
+			$r = $x ? json_decode( $x[0], true ) : null;
+			$o = get_option( SpeedUp_Meta_Tables::REGISTRY );
+			if ( is_array( $r ) && ( ! is_array( $o ) || ( $o['v'] ?? 0 ) !== ( $r['v'] ?? 0 ) ) ) {
+				$this->stale_option = true;
+			}
 		} else {
 			$r = get_option( SpeedUp_Meta_Tables::REGISTRY );
 		}
 		$r            = is_array( $r ) ? $r : array();
+		$this->all    = $r ? $r : null;
 		$this->reg    = $r['reg'] ?? array();
 		$this->ver    = (int) ( $r['v'] ?? 0 );
 		$this->state  = $r['state'] ?? 'off';
@@ -260,33 +272,62 @@ class SpeedUp_Meta_Tables_Engine {
 	/**
 	 * Writes the registry with a new version, on the current connection, and returns the version.
 	 *
+	 * The registry table and the version row are written together (in the same transaction when there is one).
+	 * The autoloaded option is only a cache of them: updated right away through the Options API, or at the end of
+	 * the request when $cache is false (a refresh inside the side connection's transaction).
+	 *
 	 * @param array  $reg   Definitions.
 	 * @param string $state Registry state.
+	 * @param bool   $cache Update the option now.
 	 * @return int
 	 */
-	public function publish( array $reg, string $state ): int {
-		$v = 1 + (int) ( $this->rows( 'SELECT seq FROM ' . $this->pre . "queue WHERE ent='_v' AND object_id=1" )[0][0] ?? 0 );
-		$s = maybe_serialize(
-			array(
-				'v'     => $v,
-				'state' => $state,
-				'reg'   => $reg,
-			)
+	public function publish( array $reg, string $state, bool $cache = true ): int {
+		$v   = 1 + (int) ( $this->rows( 'SELECT seq FROM ' . $this->pre . "queue WHERE ent='_v' AND object_id=1" )[0][0] ?? 0 );
+		$all = array(
+			'v'     => $v,
+			'state' => $state,
+			'reg'   => $reg,
 		);
-		$this->rows( 'INSERT INTO ' . $this->wp . "options (option_name, option_value, autoload) VALUES ('" . SpeedUp_Meta_Tables::REGISTRY . "', " . $this->e( $s ) . ", 'yes') ON DUPLICATE KEY UPDATE option_value=VALUES(option_value)" );
+		$this->rows( 'INSERT INTO ' . $this->pre . "registry (k, v) VALUES ('main', " . $this->e( wp_json_encode( $all ) ) . ') ON DUPLICATE KEY UPDATE v=VALUES(v)' );
 		$this->rows( 'INSERT INTO ' . $this->pre . "queue VALUES ('_v', 1, $v) ON DUPLICATE KEY UPDATE seq=$v" );
-		wp_cache_delete( 'alloptions', 'options' );
-		wp_cache_delete( SpeedUp_Meta_Tables::REGISTRY, 'options' );
-		$none = wp_cache_get( 'notoptions', 'options' );
-		if ( is_array( $none ) && isset( $none[ SpeedUp_Meta_Tables::REGISTRY ] ) ) {
-			unset( $none[ SpeedUp_Meta_Tables::REGISTRY ] );
-			wp_cache_set( 'notoptions', $none, 'options' );
-		}
 		$this->reg   = 'on' === $state ? $reg : array();
 		$this->ver   = $v;
 		$this->state = $state;
 		$this->tpl   = null;
+		$this->all   = $all;
+		if ( $cache ) {
+			update_option( SpeedUp_Meta_Tables::REGISTRY, $all, true );
+		} else {
+			$this->stale_option = true;
+		}
 		return $v;
+	}
+
+	/**
+	 * The registry as last loaded or published.
+	 *
+	 * @var array|null
+	 */
+	private $all = null;
+
+	/**
+	 * Brings the registry option up to date (at the end of a request, through the Options API).
+	 */
+	public function sync_option() {
+		if ( ! $this->stale_option ) {
+			return;
+		}
+		$this->stale_option = false;
+		if ( null === $this->all ) {
+			$x = $this->m->query( 'SELECT v FROM ' . $this->pre . "registry WHERE k='main'" );
+			$x = $x ? $x->fetch_row() : null;
+			$r = $x ? json_decode( $x[0], true ) : null;
+			if ( ! is_array( $r ) ) {
+				return;
+			}
+			$this->all = $r;
+		}
+		update_option( SpeedUp_Meta_Tables::REGISTRY, $this->all, true );
 	}
 
 	/**
@@ -2675,7 +2716,7 @@ class SpeedUp_Meta_Tables_Engine {
 	 * before the notes are removed.
 	 */
 	private function save_reg() {
-		$this->publish( $this->reg, 'on' );
+		$this->publish( $this->reg, 'on', false );
 		$this->changed = true;
 	}
 

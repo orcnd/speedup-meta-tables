@@ -692,6 +692,7 @@ class SpeedUp_Meta_Tables_Interceptor {
 		if ( ! self::$e ) {
 			return;
 		}
+		self::$e->sync_option();
 		self::$e->save_patterns();
 		if ( self::$e->used ) {
 			$used = get_option( SpeedUp_Meta_Tables::USED );

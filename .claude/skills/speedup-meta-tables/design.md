@@ -15,4 +15,9 @@ Limits and costs get as much room as the gains.
 
 ## Listing art
 
-None yet. The plugin is distributed through GitHub releases, not WordPress.org.
+Source: `art/art.html` next to this file (open it over http; `?2` renders the 1544x500 banner, `?half` the 128 icon).
+Concept: the meta table is a tall pile of thin key/value rows; the plugin turns the fields a query needs into one
+short, wide table. Left of the banner the name and one sentence, right the grey pile, an arrow and the blue table.
+Icon: the blue table alone. Colors: background #0f1b2d, blue #338ced (the plugin's color in the charts), greys for
+meta rows. No lightning bolts, rockets or speedometers. Screenshots come from the lab site with the plugin's real
+tables and patterns.

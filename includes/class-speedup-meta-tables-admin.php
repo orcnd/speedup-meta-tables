@@ -235,7 +235,7 @@ class SpeedUp_Meta_Tables_Admin {
 					}
 					?>
 					<tr>
-						<td><?php echo esc_html( $s['ent'] . ( '' !== $s['types'] && '?' !== $s['types'] ? ': ' . $s['types'] : '' ) ); ?></td>
+						<td><?php echo esc_html( $s['ent'] . ( '' !== $s['types'] && '?' !== $s['types'] ? ': ' . str_replace( ',', ', ', $s['types'] ) : '' ) ); ?></td>
 						<td><?php echo esc_html( implode( ', ', array_keys( SpeedUp_Meta_Tables_Sql::needs( $q ) ) ) ); ?></td>
 						<td><?php echo esc_html( number_format_i18n( (int) $s['hits'] ) ); ?></td>
 						<td><?php echo esc_html( self::ago( strtotime( $s['last_seen'] . ' UTC' ) ) ); ?></td>

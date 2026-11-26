@@ -2,9 +2,9 @@
 
 Updated 2026-11-26.
 
-- Version: 0.1.0, not released
-- Repository: not created (planned: github.com/orcnd/speedup-meta-tables, public)
-- WordPress.org: not submitted (GitHub releases only for now)
+- Version: 0.1.0, released on GitHub 2026-11-26 (v0.1.0, zip attached)
+- Repository: github.com/orcnd/speedup-meta-tables (public), first commit 01a415d
+- WordPress.org: 0.1.1 prepared for submission (listing images in `.wordpress-org/`); the owner uploads the zip
 
 ## Done
 

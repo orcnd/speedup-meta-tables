@@ -46,12 +46,15 @@ describes it.
 - Table names are prefixed (`{prefix}speedup_meta_table_N`, registry `{prefix}speedup_meta_tables`) instead of the
   bare `performance_table_N` of the plan, so they cannot collide with another plugin.
 - The plugin's own SQL runs on `$wpdb->dbh` directly: going through `wpdb` would overwrite `last_query`,
-  `insert_id` and `num_rows` of the site's code. Background refreshes run on a second connection (a second `wpdb`) so
-  they never join or end a transaction of the site.
+  `insert_id` and `num_rows` of the site's code. Refreshes run on a second connection (`mysqli_init()` with the site's
+  settings, no wpdb, so a failed connect sends the query to WordPress instead of an error page) so they never join or
+  end a transaction of the site.
 - Nothing may run on the site's connection between a page query and its `FOUND_ROWS()` (a bug of this kind was found
   by `wptest.php`: reloading options there reset the total).
-- The registry is an autoloaded option (about 70 KB on the lab data) so a request pays no query for it; the version
-  row in the queue table tells a request when it changed.
+- The registry lives in the plugin's own `{prefix}speedup_meta_registry` table (written with the version row, in the
+  same transaction). The autoloaded option `speedup_meta_tables_registry` (about 70 KB on the lab data) is only a
+  cache, written through `update_option()`: right away by the planner, at the end of the request after a refresh
+  changed it. Never write `wp_options` with SQL (WordPress.org review).
 - Writes are noted even when reads are paused or switched off by the filter, so the tables never go stale silently.
 - While a build runs, reads go to WordPress and every write is noted; the build waits 60 s first so requests that
   loaded the old registry finish.

@@ -3,7 +3,7 @@
  * Plugin Name:       SpeedUp Meta Tables
  * Plugin URI:        https://github.com/orcnd/speedup-meta-tables
  * Description:       Answers slow postmeta, usermeta and WooCommerce order meta queries from narrow tables it builds from the queries your site really runs. Writes still go to the meta tables untouched.
- * Version:           0.1.0
+ * Version:           0.1.1
  * Requires at least: 6.4
  * Requires PHP:      8.0
  * Author:            orcnd
@@ -17,7 +17,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'SPEEDUP_META_TABLES_VERSION', '0.1.0' );
+define( 'SPEEDUP_META_TABLES_VERSION', '0.1.1' );
 define( 'SPEEDUP_META_TABLES_FILE', __FILE__ );
 
 spl_autoload_register(
