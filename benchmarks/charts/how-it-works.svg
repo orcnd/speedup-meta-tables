@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="s" width="860" height="430" viewBox="0 0 860 430" role="img" aria-label="How SpeedUp Meta Tables answers reads and follows writes">
+<style>
+  .s { --bg: #ffffff; --ink: #191919; --ink2: #666666; --box: #f4f6f8; --line: #9aa4ae; --plugin: #257de0; --pluginbg: #e8f1fc; --wp: #f47230; --wpbg: #fdeee6; }
+  @media (prefers-color-scheme: dark) {
+    .s { --bg: #0d1117; --ink: #efefef; --ink2: #9c9c9c; --box: #161b22; --line: #6e7681; --plugin: #338ced; --pluginbg: #10233b; --wp: #e76624; --wpbg: #2e1a10; }
+  }
+  text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; fill: var(--ink); font-size: 13px; }
+  .t2 { fill: var(--ink2); font-size: 12px; }
+  .h { font-weight: 600; font-size: 14px; }
+  .bg { fill: var(--bg); }
+  .box { fill: var(--box); stroke: var(--line); stroke-width: 1; }
+  .pbox { fill: var(--pluginbg); stroke: var(--plugin); stroke-width: 1.5; }
+  .wbox { fill: var(--wpbg); stroke: var(--wp); stroke-width: 1.5; }
+  .a { stroke: var(--line); stroke-width: 1.5; fill: none; marker-end: url(#arrow); }
+  .ap { stroke: var(--plugin); stroke-width: 1.5; fill: none; marker-end: url(#arrowp); }
+  .dash { stroke-dasharray: 4 4; }
+</style>
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" style="fill: var(--line)"/></marker>
+  <marker id="arrowp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" style="fill: var(--plugin)"/></marker>
+</defs>
+<rect class="bg" width="860" height="430" rx="6"/>
+
+<text x="20" y="32" class="h">Reads</text>
+<rect class="box" x="20" y="46" width="200" height="62" rx="6"/>
+<text x="32" y="70">WP_Query, WP_User_Query,</text>
+<text x="32" y="88">wc_get_orders, known SQL</text>
+<path class="a" d="M220,77 H268"/>
+<rect class="pbox" x="270" y="46" width="250" height="62" rx="6"/>
+<text x="282" y="70">wpdb "query" filter: is there a table</text>
+<text x="282" y="88">for this pattern, and is it fresh?</text>
+<path class="ap" d="M520,64 H588"/>
+<text x="530" y="56" class="t2">yes</text>
+<rect class="pbox" x="590" y="34" width="250" height="48" rx="6"/>
+<text x="602" y="55">speedup_meta_table_N</text>
+<text x="602" y="72" class="t2">one row per object, indexed</text>
+<path class="a" d="M520,94 H588"/>
+<text x="530" y="112" class="t2">no</text>
+<rect class="wbox" x="590" y="92" width="250" height="48" rx="6"/>
+<text x="602" y="113">postmeta, usermeta, orders_meta</text>
+<text x="602" y="130" class="t2">the original SQL, unchanged</text>
+
+<text x="20" y="190" class="h">Writes</text>
+<rect class="box" x="20" y="204" width="200" height="62" rx="6"/>
+<text x="32" y="228">INSERT, UPDATE, DELETE</text>
+<text x="32" y="246">from any code via wpdb</text>
+<path class="a" d="M220,224 H588"/>
+<text x="300" y="216" class="t2">runs untouched</text>
+<rect class="wbox" x="590" y="200" width="250" height="48" rx="6"/>
+<text x="602" y="229">meta tables, as always</text>
+<path class="ap" d="M220,252 H268"/>
+<rect class="pbox" x="270" y="232" width="250" height="62" rx="6"/>
+<text x="282" y="256">note the changed object ids</text>
+<text x="282" y="274" class="t2">same transaction, about 0.03 ms</text>
+<path class="ap dash" d="M395,232 V112"/>
+<text x="402" y="160" class="t2">the next read copies</text>
+<text x="402" y="176" class="t2">those objects first</text>
+
+<text x="20" y="338" class="h">In the background</text>
+<rect class="box" x="20" y="352" width="200" height="54" rx="6"/>
+<text x="32" y="375">patterns of reads that</text>
+<text x="32" y="393">no table answered</text>
+<path class="a" d="M220,379 H268"/>
+<rect class="pbox" x="270" y="352" width="250" height="54" rx="6"/>
+<text x="282" y="375">hourly check (WP-Cron)</text>
+<text x="282" y="393" class="t2">seen often, at least 1,000 objects?</text>
+<path class="ap" d="M520,379 H588"/>
+<rect class="pbox" x="590" y="352" width="250" height="54" rx="6"/>
+<text x="602" y="375">build, rebuild or drop tables</text>
+<text x="602" y="393" class="t2">reads use WordPress meanwhile</text>
+</svg>

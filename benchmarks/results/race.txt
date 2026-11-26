@@ -1,0 +1,2 @@
+supplier counters wrong: 0
+45 s: 10419 write rounds, 7869 reads (1121 sent to meta table), write median 0.17 ms p99 1.76 ms, left in queue 1, stale rows or counters 0

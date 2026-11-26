@@ -1,0 +1,4 @@
+  direct join update: unknown objects of kind post, repaired in 50.8 s
+  direct join update: unknown objects of kind post, repaired in 52.5 s
+  key _supplier of table 35 switched off
+855 comparisons, 0 differences, 792 answered by the tables, 63 by WordPress

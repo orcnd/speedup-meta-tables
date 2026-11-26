@@ -1,0 +1,246 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="s" width="860" height="956" viewBox="0 0 860 956" role="img" aria-label="whole page time, median of 7 loads, log scale">
+<style>
+  .s { --bg: #ffffff; --ink: #191919; --ink2: #666666; --grid: #e4e4e4; --stock: #f47230; --plugin: #257de0; --ring: #ffffff; }
+  @media (prefers-color-scheme: dark) {
+    .s { --ink: #efefef; --ink2: #9c9c9c; --grid: #333333; --stock: #e76624; --plugin: #338ced; --ring: #0d1117; --bg: #0d1117; }
+  }
+  text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; fill: var(--ink); }
+  .t2 { fill: var(--ink2); }
+  .grid { stroke: var(--grid); stroke-width: 1; }
+  .link { stroke: var(--ink2); stroke-width: 2; opacity: .35; }
+  .stock { fill: var(--stock); stroke: var(--ring); stroke-width: 2; }
+  .plugin { fill: var(--plugin); stroke: var(--ring); stroke-width: 2; }
+  .bstock { fill: var(--stock); }
+  .bplugin { fill: var(--plugin); }
+  .bg { fill: var(--bg); }
+</style>
+<rect class="bg" width="860" height="956" rx="6"/>
+<circle class="stock" cx="300" cy="18" r="5"/><text x="310" y="22" font-size="12">WordPress alone</text><circle class="plugin" cx="430" cy="18" r="5"/><text x="440" y="22" font-size="12">With SpeedUp Meta Tables</text>
+<text x="8" y="22" font-size="12" class="t2">whole page time, median of 7 loads, log scale</text>
+<line class="grid" x1="300.0" x2="300.0" y1="54" y2="928"/>
+<text x="300.0" y="944" font-size="11" class="t2" text-anchor="middle">10 ms</text>
+<line class="grid" x1="422.5" x2="422.5" y1="54" y2="928"/>
+<text x="422.5" y="944" font-size="11" class="t2" text-anchor="middle">100 ms</text>
+<line class="grid" x1="545.0" x2="545.0" y1="54" y2="928"/>
+<text x="545.0" y="944" font-size="11" class="t2" text-anchor="middle">1 s</text>
+<line class="grid" x1="667.5" x2="667.5" y1="54" y2="928"/>
+<text x="667.5" y="944" font-size="11" class="t2" text-anchor="middle">10 s</text>
+<line class="grid" x1="790.0" x2="790.0" y1="54" y2="928"/>
+<text x="790.0" y="944" font-size="11" class="t2" text-anchor="middle">100 s</text>
+<text x="798" y="50" font-size="11" class="t2">faster</text>
+<text x="8" y="76.0" font-size="12"><tspan font-weight="600">P7</tspan><tspan class="t2" dx="6">Sort by shelf, products without a shelf in</tspan></text>
+<line class="link" x1="493.2" x2="730.2" y1="72.0" y2="72.0"/>
+<circle class="stock" cx="730.2" cy="72.0" r="5"><title>P7 WordPress alone: 32.5 s</title></circle>
+<circle class="plugin" cx="493.2" cy="72.0" r="5"><title>P7 with the plugin: 378 ms</title></circle>
+<text x="798" y="76.0" font-size="12" class="t2">86x</text>
+<text x="8" y="96.0" font-size="12"><tspan font-weight="600">P15</tspan><tspan class="t2" dx="6">ERP sync, 100 products one by one</tspan></text>
+<line class="link" x1="447.8" x2="647.0" y1="92.0" y2="92.0"/>
+<circle class="stock" cx="647.0" cy="92.0" r="5"><title>P15 WordPress alone: 6.8 s</title></circle>
+<circle class="plugin" cx="447.8" cy="92.0" r="5"><title>P15 with the plugin: 161 ms</title></circle>
+<text x="798" y="96.0" font-size="12" class="t2">42x</text>
+<text x="8" y="116.0" font-size="12"><tspan font-weight="600">P20</tspan><tspan class="t2" dx="6">Daily scheduled sale job</tspan></text>
+<line class="link" x1="453.2" x2="588.4" y1="112.0" y2="112.0"/>
+<circle class="stock" cx="588.4" cy="112.0" r="5"><title>P20 WordPress alone: 2.3 s</title></circle>
+<circle class="plugin" cx="453.2" cy="112.0" r="5"><title>P20 with the plugin: 178 ms</title></circle>
+<text x="798" y="116.0" font-size="12" class="t2">13x</text>
+<text x="8" y="136.0" font-size="12"><tspan font-weight="600">P4</tspan><tspan class="t2" dx="6">Products without an EAN</tspan></text>
+<line class="link" x1="487.3" x2="584.0" y1="132.0" y2="132.0"/>
+<circle class="stock" cx="584.0" cy="132.0" r="5"><title>P4 WordPress alone: 2.1 s</title></circle>
+<circle class="plugin" cx="487.3" cy="132.0" r="5"><title>P4 with the plugin: 338 ms</title></circle>
+<text x="798" y="136.0" font-size="12" class="t2">6.2x</text>
+<text x="8" y="156.0" font-size="12"><tspan font-weight="600">U6</tspan><tspan class="t2" dx="6">Membership status counters</tspan></text>
+<line class="link" x1="456.2" x2="582.0" y1="152.0" y2="152.0"/>
+<circle class="stock" cx="582.0" cy="152.0" r="5"><title>U6 WordPress alone: 2.0 s</title></circle>
+<circle class="plugin" cx="456.2" cy="152.0" r="5"><title>U6 with the plugin: 188 ms</title></circle>
+<text x="798" y="156.0" font-size="12" class="t2">11x</text>
+<text x="8" y="176.0" font-size="12"><tspan font-weight="600">P3</tspan><tspan class="t2" dx="6">Products without an image</tspan></text>
+<line class="link" x1="488.4" x2="581.6" y1="172.0" y2="172.0"/>
+<circle class="stock" cx="581.6" cy="172.0" r="5"><title>P3 WordPress alone: 2.0 s</title></circle>
+<circle class="plugin" cx="488.4" cy="172.0" r="5"><title>P3 with the plugin: 345 ms</title></circle>
+<text x="798" y="176.0" font-size="12" class="t2">5.8x</text>
+<text x="8" y="196.0" font-size="12"><tspan font-weight="600">P9</tspan><tspan class="t2" dx="6">Sale ends within 30 days</tspan></text>
+<line class="link" x1="489.4" x2="565.3" y1="192.0" y2="192.0"/>
+<circle class="stock" cx="565.3" cy="192.0" r="5"><title>P9 WordPress alone: 1.5 s</title></circle>
+<circle class="plugin" cx="489.4" cy="192.0" r="5"><title>P9 with the plugin: 351 ms</title></circle>
+<text x="798" y="196.0" font-size="12" class="t2">4.2x</text>
+<text x="8" y="216.0" font-size="12"><tspan font-weight="600">U4</tspan><tspan class="t2" dx="6">Customers without a company name</tspan></text>
+<line class="link" x1="467.6" x2="562.8" y1="212.0" y2="212.0"/>
+<circle class="stock" cx="562.8" cy="212.0" r="5"><title>U4 WordPress alone: 1.4 s</title></circle>
+<circle class="plugin" cx="467.6" cy="212.0" r="5"><title>U4 with the plugin: 234 ms</title></circle>
+<text x="798" y="216.0" font-size="12" class="t2">6.0x</text>
+<text x="8" y="236.0" font-size="12"><tspan font-weight="600">P10</tspan><tspan class="t2" dx="6">On sale and in stock</tspan></text>
+<line class="link" x1="487.8" x2="562.7" y1="232.0" y2="232.0"/>
+<circle class="stock" cx="562.7" cy="232.0" r="5"><title>P10 WordPress alone: 1.4 s</title></circle>
+<circle class="plugin" cx="487.8" cy="232.0" r="5"><title>P10 with the plugin: 341 ms</title></circle>
+<text x="798" y="236.0" font-size="12" class="t2">4.1x</text>
+<text x="8" y="256.0" font-size="12"><tspan font-weight="600">P17</tspan><tspan class="t2" dx="6">Open the product edit screen</tspan></text>
+<line class="link" x1="474.8" x2="551.5" y1="252.0" y2="252.0"/>
+<circle class="stock" cx="551.5" cy="252.0" r="5"><title>P17 WordPress alone: 1.1 s</title></circle>
+<circle class="plugin" cx="474.8" cy="252.0" r="5"><title>P17 with the plugin: 267 ms</title></circle>
+<text x="798" y="256.0" font-size="12" class="t2">4.2x</text>
+<text x="8" y="276.0" font-size="12"><tspan font-weight="600">P16</tspan><tspan class="t2" dx="6">Export, 500 products</tspan></text>
+<line class="link" x1="450.0" x2="549.0" y1="272.0" y2="272.0"/>
+<circle class="stock" cx="549.0" cy="272.0" r="5"><title>P16 WordPress alone: 1.1 s</title></circle>
+<circle class="plugin" cx="450.0" cy="272.0" r="5"><title>P16 with the plugin: 168 ms</title></circle>
+<text x="798" y="276.0" font-size="12" class="t2">6.4x</text>
+<text x="8" y="296.0" font-size="12"><tspan font-weight="600">P19</tspan><tspan class="t2" dx="6">Low stock report</tspan></text>
+<line class="link" x1="408.2" x2="546.5" y1="292.0" y2="292.0"/>
+<circle class="stock" cx="546.5" cy="292.0" r="5"><title>P19 WordPress alone: 1.0 s</title></circle>
+<circle class="plugin" cx="408.2" cy="292.0" r="5"><title>P19 with the plugin: 76 ms</title></circle>
+<text x="798" y="296.0" font-size="12" class="t2">13x</text>
+<text x="8" y="316.0" font-size="12"><tspan font-weight="600">U2</tspan><tspan class="t2" dx="6">Search a customer on the order screen</tspan></text>
+<line class="link" x1="544.5" x2="546.0" y1="312.0" y2="312.0"/>
+<circle class="stock" cx="546.0" cy="312.0" r="5"><title>U2 WordPress alone: 1.0 s</title></circle>
+<circle class="plugin" cx="544.5" cy="312.0" r="5"><title>U2 with the plugin: 991 ms</title></circle>
+<text x="798" y="316.0" font-size="12" class="t2">1.0x</text>
+<text x="8" y="336.0" font-size="12"><tspan font-weight="600">K3</tspan><tspan class="t2" dx="6">Search products by name and SKU</tspan></text>
+<line class="link" x1="521.2" x2="520.4" y1="332.0" y2="332.0"/>
+<circle class="stock" cx="520.4" cy="332.0" r="5"><title>K3 WordPress alone: 630 ms</title></circle>
+<circle class="plugin" cx="521.2" cy="332.0" r="5"><title>K3 with the plugin: 639 ms</title></circle>
+<text x="798" y="336.0" font-size="12" class="t2">1.0x</text>
+<text x="8" y="356.0" font-size="12"><tspan font-weight="600">O1</tspan><tspan class="t2" dx="6">Order search</tspan></text>
+<line class="link" x1="489.8" x2="513.9" y1="352.0" y2="352.0"/>
+<circle class="stock" cx="513.9" cy="352.0" r="5"><title>O1 WordPress alone: 557 ms</title></circle>
+<circle class="plugin" cx="489.8" cy="352.0" r="5"><title>O1 with the plugin: 354 ms</title></circle>
+<text x="798" y="356.0" font-size="12" class="t2">1.6x</text>
+<text x="8" y="376.0" font-size="12"><tspan font-weight="600">P6</tspan><tspan class="t2" dx="6">Sort by total sales</tspan></text>
+<line class="link" x1="485.4" x2="507.7" y1="372.0" y2="372.0"/>
+<circle class="stock" cx="507.7" cy="372.0" r="5"><title>P6 WordPress alone: 496 ms</title></circle>
+<circle class="plugin" cx="485.4" cy="372.0" r="5"><title>P6 with the plugin: 326 ms</title></circle>
+<text x="798" y="376.0" font-size="12" class="t2">1.5x</text>
+<text x="8" y="396.0" font-size="12"><tspan font-weight="600">P18</tspan><tspan class="t2" dx="6">Low stock counter</tspan></text>
+<line class="link" x1="384.2" x2="504.7" y1="392.0" y2="392.0"/>
+<circle class="stock" cx="504.7" cy="392.0" r="5"><title>P18 WordPress alone: 469 ms</title></circle>
+<circle class="plugin" cx="384.2" cy="392.0" r="5"><title>P18 with the plugin: 49 ms</title></circle>
+<text x="798" y="396.0" font-size="12" class="t2">9.6x</text>
+<text x="8" y="416.0" font-size="12"><tspan font-weight="600">M1</tspan><tspan class="t2" dx="6">Search the media library</tspan></text>
+<line class="link" x1="477.6" x2="503.1" y1="412.0" y2="412.0"/>
+<circle class="stock" cx="503.1" cy="412.0" r="5"><title>M1 WordPress alone: 455 ms</title></circle>
+<circle class="plugin" cx="477.6" cy="412.0" r="5"><title>M1 with the plugin: 282 ms</title></circle>
+<text x="798" y="416.0" font-size="12" class="t2">1.6x</text>
+<text x="8" y="436.0" font-size="12"><tspan font-weight="600">P5</tspan><tspan class="t2" dx="6">Sort by purchase cost</tspan></text>
+<line class="link" x1="484.0" x2="501.7" y1="432.0" y2="432.0"/>
+<circle class="stock" cx="501.7" cy="432.0" r="5"><title>P5 WordPress alone: 443 ms</title></circle>
+<circle class="plugin" cx="484.0" cy="432.0" r="5"><title>P5 with the plugin: 318 ms</title></circle>
+<text x="798" y="436.0" font-size="12" class="t2">1.4x</text>
+<text x="8" y="456.0" font-size="12"><tspan font-weight="600">P8</tspan><tspan class="t2" dx="6">Reorder list: supplier and stock range</tspan></text>
+<line class="link" x1="495.1" x2="501.5" y1="452.0" y2="452.0"/>
+<circle class="stock" cx="501.5" cy="452.0" r="5"><title>P8 WordPress alone: 442 ms</title></circle>
+<circle class="plugin" cx="495.1" cy="452.0" r="5"><title>P8 with the plugin: 392 ms</title></circle>
+<text x="798" y="456.0" font-size="12" class="t2">1.1x</text>
+<text x="8" y="476.0" font-size="12"><tspan font-weight="600">P11</tspan><tspan class="t2" dx="6">Search by part of the ERP code</tspan></text>
+<line class="link" x1="492.8" x2="500.2" y1="472.0" y2="472.0"/>
+<circle class="stock" cx="500.2" cy="472.0" r="5"><title>P11 WordPress alone: 431 ms</title></circle>
+<circle class="plugin" cx="492.8" cy="472.0" r="5"><title>P11 with the plugin: 375 ms</title></circle>
+<text x="798" y="476.0" font-size="12" class="t2">1.1x</text>
+<text x="8" y="496.0" font-size="12"><tspan font-weight="600">O4</tspan><tspan class="t2" dx="6">Delivery date this week</tspan></text>
+<line class="link" x1="483.1" x2="499.1" y1="492.0" y2="492.0"/>
+<circle class="stock" cx="499.1" cy="492.0" r="5"><title>O4 WordPress alone: 422 ms</title></circle>
+<circle class="plugin" cx="483.1" cy="492.0" r="5"><title>O4 with the plugin: 312 ms</title></circle>
+<text x="798" y="496.0" font-size="12" class="t2">1.4x</text>
+<text x="8" y="516.0" font-size="12"><tspan font-weight="600">P2</tspan><tspan class="t2" dx="6">Three suppliers, in stock</tspan></text>
+<line class="link" x1="484.3" x2="496.4" y1="512.0" y2="512.0"/>
+<circle class="stock" cx="496.4" cy="512.0" r="5"><title>P2 WordPress alone: 401 ms</title></circle>
+<circle class="plugin" cx="484.3" cy="512.0" r="5"><title>P2 with the plugin: 320 ms</title></circle>
+<text x="798" y="516.0" font-size="12" class="t2">1.3x</text>
+<text x="8" y="536.0" font-size="12"><tspan font-weight="600">W1</tspan><tspan class="t2" dx="6">Update stock and cost of 40 products</tspan></text>
+<line class="link" x1="497.9" x2="496.4" y1="532.0" y2="532.0"/>
+<circle class="stock" cx="496.4" cy="532.0" r="5"><title>W1 WordPress alone: 401 ms</title></circle>
+<circle class="plugin" cx="497.9" cy="532.0" r="5"><title>W1 with the plugin: 413 ms</title></circle>
+<text x="798" y="536.0" font-size="12" class="t2">1.0x</text>
+<text x="8" y="556.0" font-size="12"><tspan font-weight="600">L2</tspan><tspan class="t2" dx="6">Order search</tspan></text>
+<line class="link" x1="486.7" x2="495.4" y1="552.0" y2="552.0"/>
+<circle class="stock" cx="495.4" cy="552.0" r="5"><title>L2 WordPress alone: 394 ms</title></circle>
+<circle class="plugin" cx="486.7" cy="552.0" r="5"><title>L2 with the plugin: 334 ms</title></circle>
+<text x="798" y="556.0" font-size="12" class="t2">1.2x</text>
+<text x="8" y="576.0" font-size="12"><tspan font-weight="600">O2</tspan><tspan class="t2" dx="6">Find by part of a tracking number</tspan></text>
+<line class="link" x1="476.3" x2="491.1" y1="572.0" y2="572.0"/>
+<circle class="stock" cx="491.1" cy="572.0" r="5"><title>O2 WordPress alone: 363 ms</title></circle>
+<circle class="plugin" cx="476.3" cy="572.0" r="5"><title>O2 with the plugin: 275 ms</title></circle>
+<text x="798" y="576.0" font-size="12" class="t2">1.3x</text>
+<text x="8" y="596.0" font-size="12"><tspan font-weight="600">K1</tspan><tspan class="t2" dx="6">Product list (no meta filter)</tspan></text>
+<line class="link" x1="487.7" x2="489.2" y1="592.0" y2="592.0"/>
+<circle class="stock" cx="489.2" cy="592.0" r="5"><title>K1 WordPress alone: 350 ms</title></circle>
+<circle class="plugin" cx="487.7" cy="592.0" r="5"><title>K1 with the plugin: 341 ms</title></circle>
+<text x="798" y="596.0" font-size="12" class="t2">1.0x</text>
+<text x="8" y="616.0" font-size="12"><tspan font-weight="600">P1</tspan><tspan class="t2" dx="6">Filter by supplier</tspan></text>
+<line class="link" x1="485.6" x2="489.0" y1="612.0" y2="612.0"/>
+<circle class="stock" cx="489.0" cy="612.0" r="5"><title>P1 WordPress alone: 349 ms</title></circle>
+<circle class="plugin" cx="485.6" cy="612.0" r="5"><title>P1 with the plugin: 328 ms</title></circle>
+<text x="798" y="616.0" font-size="12" class="t2">1.1x</text>
+<text x="8" y="636.0" font-size="12"><tspan font-weight="600">L1</tspan><tspan class="t2" dx="6">Orders of one customer</tspan></text>
+<line class="link" x1="476.2" x2="480.9" y1="632.0" y2="632.0"/>
+<circle class="stock" cx="480.9" cy="632.0" r="5"><title>L1 WordPress alone: 300 ms</title></circle>
+<circle class="plugin" cx="476.2" cy="632.0" r="5"><title>L1 with the plugin: 274 ms</title></circle>
+<text x="798" y="636.0" font-size="12" class="t2">1.1x</text>
+<text x="8" y="656.0" font-size="12"><tspan font-weight="600">L4</tspan><tspan class="t2" dx="6">Filter by where the order came from</tspan></text>
+<line class="link" x1="467.7" x2="473.9" y1="652.0" y2="652.0"/>
+<circle class="stock" cx="473.9" cy="652.0" r="5"><title>L4 WordPress alone: 263 ms</title></circle>
+<circle class="plugin" cx="467.7" cy="652.0" r="5"><title>L4 with the plugin: 234 ms</title></circle>
+<text x="798" y="656.0" font-size="12" class="t2">1.1x</text>
+<text x="8" y="676.0" font-size="12"><tspan font-weight="600">O3</tspan><tspan class="t2" dx="6">Orders without a tracking number</tspan></text>
+<line class="link" x1="474.0" x2="473.2" y1="672.0" y2="672.0"/>
+<circle class="stock" cx="473.2" cy="672.0" r="5"><title>O3 WordPress alone: 259 ms</title></circle>
+<circle class="plugin" cx="474.0" cy="672.0" r="5"><title>O3 with the plugin: 263 ms</title></circle>
+<text x="798" y="676.0" font-size="12" class="t2">1.0x</text>
+<text x="8" y="696.0" font-size="12"><tspan font-weight="600">U3</tspan><tspan class="t2" dx="6">Country + at least 5 orders</tspan></text>
+<line class="link" x1="452.4" x2="473.2" y1="692.0" y2="692.0"/>
+<circle class="stock" cx="473.2" cy="692.0" r="5"><title>U3 WordPress alone: 259 ms</title></circle>
+<circle class="plugin" cx="452.4" cy="692.0" r="5"><title>U3 with the plugin: 175 ms</title></circle>
+<text x="798" y="696.0" font-size="12" class="t2">1.5x</text>
+<text x="8" y="716.0" font-size="12"><tspan font-weight="600">L3</tspan><tspan class="t2" dx="6">Sort by order total</tspan></text>
+<line class="link" x1="467.6" x2="472.9" y1="712.0" y2="712.0"/>
+<circle class="stock" cx="472.9" cy="712.0" r="5"><title>L3 WordPress alone: 258 ms</title></circle>
+<circle class="plugin" cx="467.6" cy="712.0" r="5"><title>L3 with the plugin: 233 ms</title></circle>
+<text x="798" y="716.0" font-size="12" class="t2">1.1x</text>
+<text x="8" y="736.0" font-size="12"><tspan font-weight="600">U1</tspan><tspan class="t2" dx="6">Filter users by role</tspan></text>
+<line class="link" x1="459.9" x2="472.9" y1="732.0" y2="732.0"/>
+<circle class="stock" cx="472.9" cy="732.0" r="5"><title>U1 WordPress alone: 258 ms</title></circle>
+<circle class="plugin" cx="459.9" cy="732.0" r="5"><title>U1 with the plugin: 202 ms</title></circle>
+<text x="798" y="736.0" font-size="12" class="t2">1.3x</text>
+<text x="8" y="756.0" font-size="12"><tspan font-weight="600">P14</tspan><tspan class="t2" dx="6">REST: price range</tspan></text>
+<line class="link" x1="417.2" x2="471.6" y1="752.0" y2="752.0"/>
+<circle class="stock" cx="471.6" cy="752.0" r="5"><title>P14 WordPress alone: 252 ms</title></circle>
+<circle class="plugin" cx="417.2" cy="752.0" r="5"><title>P14 with the plugin: 90 ms</title></circle>
+<text x="798" y="756.0" font-size="12" class="t2">2.8x</text>
+<text x="8" y="776.0" font-size="12"><tspan font-weight="600">U5</tspan><tspan class="t2" dx="6">Sort by last activity</tspan></text>
+<line class="link" x1="456.1" x2="469.9" y1="772.0" y2="772.0"/>
+<circle class="stock" cx="469.9" cy="772.0" r="5"><title>U5 WordPress alone: 244 ms</title></circle>
+<circle class="plugin" cx="456.1" cy="772.0" r="5"><title>U5 with the plugin: 188 ms</title></circle>
+<text x="798" y="776.0" font-size="12" class="t2">1.3x</text>
+<text x="8" y="796.0" font-size="12"><tspan font-weight="600">C2</tspan><tspan class="t2" dx="6">Used coupons that expire this month</tspan></text>
+<line class="link" x1="465.3" x2="466.3" y1="792.0" y2="792.0"/>
+<circle class="stock" cx="466.3" cy="792.0" r="5"><title>C2 WordPress alone: 228 ms</title></circle>
+<circle class="plugin" cx="465.3" cy="792.0" r="5"><title>C2 with the plugin: 224 ms</title></circle>
+<text x="798" y="796.0" font-size="12" class="t2">1.0x</text>
+<text x="8" y="816.0" font-size="12"><tspan font-weight="600">L5</tspan><tspan class="t2" dx="6">Total spent by 5 customers</tspan></text>
+<line class="link" x1="438.5" x2="464.1" y1="812.0" y2="812.0"/>
+<circle class="stock" cx="464.1" cy="812.0" r="5"><title>L5 WordPress alone: 219 ms</title></circle>
+<circle class="plugin" cx="438.5" cy="812.0" r="5"><title>L5 with the plugin: 135 ms</title></circle>
+<text x="798" y="816.0" font-size="12" class="t2">1.6x</text>
+<text x="8" y="836.0" font-size="12"><tspan font-weight="600">C1</tspan><tspan class="t2" dx="6">Filter coupons by type</tspan></text>
+<line class="link" x1="461.9" x2="463.7" y1="832.0" y2="832.0"/>
+<circle class="stock" cx="463.7" cy="832.0" r="5"><title>C1 WordPress alone: 217 ms</title></circle>
+<circle class="plugin" cx="461.9" cy="832.0" r="5"><title>C1 with the plugin: 210 ms</title></circle>
+<text x="798" y="836.0" font-size="12" class="t2">1.0x</text>
+<text x="8" y="856.0" font-size="12"><tspan font-weight="600">K2</tspan><tspan class="t2" dx="6">Order list (HPOS)</tspan></text>
+<line class="link" x1="459.8" x2="461.2" y1="852.0" y2="852.0"/>
+<circle class="stock" cx="461.2" cy="852.0" r="5"><title>K2 WordPress alone: 207 ms</title></circle>
+<circle class="plugin" cx="459.8" cy="852.0" r="5"><title>K2 with the plugin: 202 ms</title></circle>
+<text x="798" y="856.0" font-size="12" class="t2">1.0x</text>
+<text x="8" y="876.0" font-size="12"><tspan font-weight="600">P12</tspan><tspan class="t2" dx="6">REST: out of stock</tspan></text>
+<line class="link" x1="412.6" x2="452.8" y1="872.0" y2="872.0"/>
+<circle class="stock" cx="452.8" cy="872.0" r="5"><title>P12 WordPress alone: 177 ms</title></circle>
+<circle class="plugin" cx="412.6" cy="872.0" r="5"><title>P12 with the plugin: 83 ms</title></circle>
+<text x="798" y="876.0" font-size="12" class="t2">2.1x</text>
+<text x="8" y="896.0" font-size="12"><tspan font-weight="600">L6</tspan><tspan class="t2" dx="6">Find orders by email</tspan></text>
+<line class="link" x1="439.1" x2="441.3" y1="892.0" y2="892.0"/>
+<circle class="stock" cx="441.3" cy="892.0" r="5"><title>L6 WordPress alone: 142 ms</title></circle>
+<circle class="plugin" cx="439.1" cy="892.0" r="5"><title>L6 with the plugin: 137 ms</title></circle>
+<text x="798" y="896.0" font-size="12" class="t2">1.0x</text>
+<text x="8" y="916.0" font-size="12"><tspan font-weight="600">P13</tspan><tspan class="t2" dx="6">REST: list of SKUs</tspan></text>
+<line class="link" x1="376.4" x2="432.7" y1="912.0" y2="912.0"/>
+<circle class="stock" cx="432.7" cy="912.0" r="5"><title>P13 WordPress alone: 121 ms</title></circle>
+<circle class="plugin" cx="376.4" cy="912.0" r="5"><title>P13 with the plugin: 42 ms</title></circle>
+<text x="798" y="916.0" font-size="12" class="t2">2.9x</text>
+</svg>

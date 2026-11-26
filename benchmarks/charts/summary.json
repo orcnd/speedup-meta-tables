@@ -1,0 +1,577 @@
+{
+ "queries": {
+  "screens": 39,
+  "stock_median_ms": 98.52,
+  "plugin_median_ms": 0.659,
+  "stock_geomean_ms": 162.61331876212296,
+  "plugin_geomean_ms": 1.0156458739381138,
+  "stock_total_ms": 58130.266,
+  "plugin_total_ms": 198.46200000000002,
+  "speedup_median": 155.07908611599296,
+  "speedup_min": 2.44556016992138,
+  "speedup_max": 94708.68091168093,
+  "rows": [
+   [
+    "P1",
+    "Filter by supplier",
+    21.584,
+    0.462
+   ],
+   [
+    "P2",
+    "Three suppliers, in stock",
+    73.625,
+    0.649
+   ],
+   [
+    "P3",
+    "Products without an image",
+    3090.419,
+    3.4
+   ],
+   [
+    "P4",
+    "Products without an EAN",
+    3258.49,
+    8.48
+   ],
+   [
+    "P5",
+    "Sort by purchase cost",
+    136.809,
+    0.448
+   ],
+   [
+    "P6",
+    "Sort by total sales",
+    165.65,
+    0.476
+   ],
+   [
+    "P7",
+    "Sort by shelf, products without a shelf included",
+    33242.747,
+    0.351
+   ],
+   [
+    "P8",
+    "Reorder list: supplier and stock range",
+    88.24,
+    0.569
+   ],
+   [
+    "P9",
+    "Sale ends within 30 days",
+    1175.907,
+    0.855
+   ],
+   [
+    "P10",
+    "On sale and in stock",
+    862.474,
+    0.937
+   ],
+   [
+    "P11",
+    "Search by part of the ERP code",
+    75.905,
+    1.862
+   ],
+   [
+    "P12",
+    "REST: out of stock",
+    101.715,
+    0.554
+   ],
+   [
+    "P13",
+    "REST: list of SKUs",
+    80.867,
+    0.435
+   ],
+   [
+    "P14",
+    "REST: price range",
+    221.564,
+    2.917
+   ],
+   [
+    "P15",
+    "ERP sync, 100 products one by one",
+    7017.549,
+    4.414
+   ],
+   [
+    "P16",
+    "Export, 500 products",
+    781.723,
+    0.937
+   ],
+   [
+    "P17",
+    "Open the product edit screen",
+    771.072,
+    1.512
+   ],
+   [
+    "P18",
+    "Low stock counter",
+    442.858,
+    0.659
+   ],
+   [
+    "P19",
+    "Low stock report",
+    885.337,
+    1.239
+   ],
+   [
+    "P20",
+    "Daily scheduled sale job",
+    1938.763,
+    1.948
+   ],
+   [
+    "C1",
+    "Filter coupons by type",
+    5.915,
+    0.331
+   ],
+   [
+    "C2",
+    "Used coupons that expire this month",
+    5.939,
+    0.346
+   ],
+   [
+    "U1",
+    "Filter users by role",
+    52.649,
+    5.317
+   ],
+   [
+    "U2",
+    "Search a customer on the order screen",
+    98.52,
+    24.109
+   ],
+   [
+    "U3",
+    "Country + at least 5 orders",
+    77.827,
+    0.519
+   ],
+   [
+    "U4",
+    "Customers without a company name",
+    1064.996,
+    0.591
+   ],
+   [
+    "U5",
+    "Sort by last activity",
+    58.171,
+    0.37
+   ],
+   [
+    "U6",
+    "Membership status counters",
+    1524.345,
+    1.177
+   ],
+   [
+    "M1",
+    "Search the media library",
+    143.808,
+    1.5
+   ],
+   [
+    "O1",
+    "Order search",
+    308.571,
+    126.176
+   ],
+   [
+    "O2",
+    "Find by part of a tracking number",
+    76.171,
+    0.947
+   ],
+   [
+    "O3",
+    "Orders without a tracking number",
+    2.6,
+    0.252
+   ],
+   [
+    "O4",
+    "Delivery date this week",
+    35.586,
+    0.789
+   ],
+   [
+    "L1",
+    "Orders of one customer",
+    12.248,
+    0.299
+   ],
+   [
+    "L2",
+    "Order search",
+    81.521,
+    0.959
+   ],
+   [
+    "L3",
+    "Sort by order total",
+    31.285,
+    0.33
+   ],
+   [
+    "L4",
+    "Filter by where the order came from",
+    32.441,
+    0.64
+   ],
+   [
+    "L5",
+    "Total spent by 5 customers",
+    72.784,
+    0.462
+   ],
+   [
+    "L6",
+    "Find orders by email",
+    11.591,
+    0.244
+   ]
+  ]
+ },
+ "pages": {
+  "screens": 43,
+  "stock_median_ms": 422.0118522644043,
+  "plugin_median_ms": 267.21692085266113,
+  "stock_over_1s": 13,
+  "plugin_over_1s": 0,
+  "faster_20": 27,
+  "slower_10": 0,
+  "same_result": 35,
+  "rows": [
+   [
+    "P1",
+    "Filter by supplier",
+    348.89912605285645,
+    327.6529312133789,
+    true
+   ],
+   [
+    "P2",
+    "Three suppliers, in stock",
+    401.26800537109375,
+    319.60606575012207,
+    false
+   ],
+   [
+    "P3",
+    "Products without an image",
+    1990.8080101013184,
+    345.1821804046631,
+    true
+   ],
+   [
+    "P4",
+    "Products without an EAN",
+    2081.265926361084,
+    338.09399604797363,
+    false
+   ],
+   [
+    "P5",
+    "Sort by purchase cost",
+    443.2191848754883,
+    317.59190559387207,
+    false
+   ],
+   [
+    "P6",
+    "Sort by total sales",
+    495.67294120788574,
+    325.9880542755127,
+    false
+   ],
+   [
+    "P7",
+    "Sort by shelf, products without a shelf included",
+    32493.546843528748,
+    377.94995307922363,
+    true
+   ],
+   [
+    "P8",
+    "Reorder list: supplier and stock range",
+    441.58387184143066,
+    391.5059566497803,
+    true
+   ],
+   [
+    "P9",
+    "Sale ends within 30 days",
+    1465.4200077056885,
+    351.44996643066406,
+    true
+   ],
+   [
+    "P10",
+    "On sale and in stock",
+    1394.0930366516113,
+    341.34697914123535,
+    false
+   ],
+   [
+    "P11",
+    "Search by part of the ERP code",
+    430.9418201446533,
+    375.1568794250488,
+    true
+   ],
+   [
+    "P12",
+    "REST: out of stock",
+    176.8348217010498,
+    83.02998542785645,
+    true
+   ],
+   [
+    "P13",
+    "REST: list of SKUs",
+    121.13404273986816,
+    42.07301139831543,
+    true
+   ],
+   [
+    "P14",
+    "REST: price range",
+    251.50799751281738,
+    90.45696258544922,
+    true
+   ],
+   [
+    "P15",
+    "ERP sync, 100 products one by one",
+    6803.406000137329,
+    160.9330177307129,
+    true
+   ],
+   [
+    "P16",
+    "Export, 500 products",
+    1077.4009227752686,
+    167.71793365478516,
+    true
+   ],
+   [
+    "P17",
+    "Open the product edit screen",
+    1130.476951599121,
+    267.21692085266113,
+    true
+   ],
+   [
+    "P18",
+    "Low stock counter",
+    468.54615211486816,
+    48.69413375854492,
+    true
+   ],
+   [
+    "P19",
+    "Low stock report",
+    1027.9629230499268,
+    76.4310359954834,
+    false
+   ],
+   [
+    "P20",
+    "Daily scheduled sale job",
+    2262.3510360717773,
+    178.1289577484131,
+    true
+   ],
+   [
+    "C1",
+    "Filter coupons by type",
+    216.95780754089355,
+    209.75899696350098,
+    true
+   ],
+   [
+    "C2",
+    "Used coupons that expire this month",
+    227.98895835876465,
+    223.64187240600586,
+    true
+   ],
+   [
+    "U1",
+    "Filter users by role",
+    257.79199600219727,
+    201.95388793945312,
+    true
+   ],
+   [
+    "U2",
+    "Search a customer on the order screen",
+    1018.9299583435059,
+    991.1320209503174,
+    true
+   ],
+   [
+    "U3",
+    "Country + at least 5 orders",
+    259.2580318450928,
+    175.41790008544922,
+    true
+   ],
+   [
+    "U4",
+    "Customers without a company name",
+    1396.7010974884033,
+    233.59203338623047,
+    true
+   ],
+   [
+    "U5",
+    "Sort by last activity",
+    243.78585815429688,
+    188.02309036254883,
+    true
+   ],
+   [
+    "U6",
+    "Membership status counters",
+    2004.7340393066406,
+    188.25697898864746,
+    true
+   ],
+   [
+    "M1",
+    "Search the media library",
+    454.8170566558838,
+    281.6629409790039,
+    true
+   ],
+   [
+    "O1",
+    "Order search",
+    557.0249557495117,
+    354.48479652404785,
+    true
+   ],
+   [
+    "O2",
+    "Find by part of a tracking number",
+    362.7820014953613,
+    274.8589515686035,
+    true
+   ],
+   [
+    "O3",
+    "Orders without a tracking number",
+    259.3870162963867,
+    263.28301429748535,
+    false
+   ],
+   [
+    "O4",
+    "Delivery date this week",
+    422.0118522644043,
+    312.1180534362793,
+    false
+   ],
+   [
+    "L1",
+    "Orders of one customer",
+    299.907922744751,
+    274.1589546203613,
+    true
+   ],
+   [
+    "L2",
+    "Order search",
+    393.7098979949951,
+    334.3820571899414,
+    true
+   ],
+   [
+    "L3",
+    "Sort by order total",
+    257.9660415649414,
+    233.45208168029785,
+    true
+   ],
+   [
+    "L4",
+    "Filter by where the order came from",
+    262.59398460388184,
+    234.0688705444336,
+    true
+   ],
+   [
+    "L5",
+    "Total spent by 5 customers",
+    218.5828685760498,
+    135.0710391998291,
+    true
+   ],
+   [
+    "L6",
+    "Find orders by email",
+    142.43388175964355,
+    136.65008544921875,
+    true
+   ],
+   [
+    "W1",
+    "Update stock and cost of 40 products",
+    400.9559154510498,
+    412.87994384765625,
+    true
+   ],
+   [
+    "K1",
+    "Product list (no meta filter)",
+    350.1291275024414,
+    340.6050205230713,
+    true
+   ],
+   [
+    "K2",
+    "Order list (HPOS)",
+    207.1390151977539,
+    201.66397094726562,
+    true
+   ],
+   [
+    "K3",
+    "Search products by name and SKU",
+    629.7690868377686,
+    638.8628482818604,
+    true
+   ]
+  ]
+ },
+ "load": {
+  "stock": {
+   "n": 87,
+   "med": 1242.713212966919,
+   "p95": 6734.519720077515,
+   "err": 0
+  },
+  "smt": {
+   "n": 277,
+   "med": 542.3851013183594,
+   "p95": 1435.448169708252,
+   "err": 0
+  }
+ }
+}

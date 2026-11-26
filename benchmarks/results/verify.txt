@@ -1,0 +1,2 @@
+154 queries answered, 0 differences
+  not answered: L2 17 ms SELECT DISTINCT os.order_id FROM wp_wc_order_stats os INNER JOIN wp_wc_customer_lookup cl ON os.customer_id =  

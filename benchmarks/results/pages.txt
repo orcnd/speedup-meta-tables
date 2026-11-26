@@ -1,0 +1,43 @@
+P1 Tedarikçiye göre süz | stock wall 349 meta+eng 23.7 served 0 | smt wall 328 meta+eng 3.4 served 2 {'smt': True} 
+P2 Üç tedarikçi, stokta | stock wall 401 meta+eng 82.3 served 0 | smt wall 320 meta+eng 3.6 served 2 {'smt': False} {'smt': "c54fe038fa ['1,050 items']20", 'stock': "d7d463cb65 ['1,050 items']20"}
+P3 Görseli olmayan ürünler | stock wall 1991 meta+eng 1663.5 served 0 | smt wall 345 meta+eng 3.0 served 2 {'smt': True} 
+P4 EAN kodu olmayan ürünler | stock wall 2081 meta+eng 1726.7 served 0 | smt wall 338 meta+eng 3.3 served 2 {'smt': False} {'smt': "38232c87fd ['4,012 items']20", 'stock': "852cb668ac ['4,012 items']20"}
+P5 Alış maliyetine göre sırala | stock wall 443 meta+eng 133.2 served 0 | smt wall 318 meta+eng 3.3 served 2 {'smt': False} {'stock': "b1c12ccf7c ['22,550 items']20", 'smt': "69fe3137db ['22,550 items']20"}
+P6 Toplam satışa göre sırala | stock wall 496 meta+eng 175.4 served 0 | smt wall 326 meta+eng 3.6 served 2 {'smt': False} {'stock': "d99f1b57d8 ['24,989 items']20", 'smt': "02ae9d27de ['24,989 items']20"}
+P7 Raf yerine göre sırala, rafsızlar dahil | stock wall 32494 meta+eng 32079.6 served 0 | smt wall 378 meta+eng 3.9 served 2 {'smt': True} 
+P8 Yeniden sipariş: tedarikçi, stok aralığı | stock wall 442 meta+eng 87.3 served 0 | smt wall 392 meta+eng 3.7 served 1 {'smt': True} 
+P9 İndirimi 30 gün içinde biten | stock wall 1465 meta+eng 1116.9 served 0 | smt wall 351 meta+eng 3.6 served 1 {'smt': True} 
+P10 İndirimde ve stokta | stock wall 1394 meta+eng 942.7 served 0 | smt wall 341 meta+eng 3.2 served 2 {'smt': False} {'stock': "96d55cafc0 ['5,748 items']20", 'smt': "2838efdd47 ['5,748 items']20"}
+P11 ERP kodunun parçasıyla ara | stock wall 431 meta+eng 75.6 served 0 | smt wall 375 meta+eng 4.6 served 1 {'smt': True} 
+P12 REST: stokta olmayanlar | stock wall 177 meta+eng 97.1 served 0 | smt wall 83 meta+eng 4.7 served 2 {'smt': True} 
+P13 REST: SKU listesi | stock wall 121 meta+eng 78.0 served 0 | smt wall 42 meta+eng 1.4 served 1 {'smt': True} 
+P14 REST: fiyat aralığı | stock wall 252 meta+eng 169.9 served 0 | smt wall 90 meta+eng 7.5 served 1 {'smt': True} 
+P15 ERP eşleştirme, 100 ürün tek tek | stock wall 6803 meta+eng 6649.0 served 0 | smt wall 161 meta+eng 6.6 served 100 {'smt': True} 
+P16 Dışa aktarma, 500 ürün | stock wall 1077 meta+eng 906.9 served 0 | smt wall 168 meta+eng 1.6 served 2 {'smt': True} 
+P17 Ürün düzenleme ekranını aç | stock wall 1130 meta+eng 902.6 served 0 | smt wall 267 meta+eng 9.3 served 1 {'smt': True} 
+P18 Azalan stok sayacı | stock wall 469 meta+eng 421.2 served 0 | smt wall 49 meta+eng 1.3 served 3 {'smt': True} 
+P19 Azalan stok raporu | stock wall 1028 meta+eng 954.6 served 0 | smt wall 76 meta+eng 5.1 served 1 {'smt': False} {'smt': '200 95579db603710ba354b768b3592a5034 664', 'stock': '200 bd1b8665d9f589e5991f19d8081ce6c3 664'}
+P20 Günlük indirim işi | stock wall 2262 meta+eng 2099.5 served 0 | smt wall 178 meta+eng 7.7 served 2 {'smt': True} 
+C1 Kuponları türe göre süz | stock wall 217 meta+eng 7.9 served 0 | smt wall 210 meta+eng 2.7 served 2 {'smt': True} 
+C2 Bu ay biten, kullanılmış kuponlar | stock wall 228 meta+eng 8.7 served 0 | smt wall 224 meta+eng 2.7 served 1 {'smt': True} 
+U1 Kullanıcıları role göre süz | stock wall 258 meta+eng 55.9 served 0 | smt wall 202 meta+eng 2.6 served 1 {'smt': True} 
+U2 Sipariş ekranında müşteri ara | stock wall 1019 meta+eng 516.1 served 0 | smt wall 991 meta+eng 468.8 served 1 {'smt': True} 
+U3 Ülke + en az 5 sipariş | stock wall 259 meta+eng 80.2 served 0 | smt wall 175 meta+eng 1.0 served 1 {'smt': True} 
+U4 Şirket adı olmayanlar | stock wall 1397 meta+eng 1187.5 served 0 | smt wall 234 meta+eng 3.0 served 2 {'smt': True} 
+U5 Son etkinliğe göre sırala | stock wall 244 meta+eng 60.9 served 0 | smt wall 188 meta+eng 2.3 served 2 {'smt': True} 
+U6 Üyelik durum sayaçları | stock wall 2005 meta+eng 1830.1 served 0 | smt wall 188 meta+eng 3.0 served 12 {'smt': True} 
+M1 Ortam kütüphanesinde dosya ara | stock wall 455 meta+eng 172.9 served 0 | smt wall 282 meta+eng 4.5 served 1 {'smt': True} 
+O1 Sipariş arama | stock wall 557 meta+eng 349.5 served 0 | smt wall 354 meta+eng 140.4 served 2 {'smt': True} 
+O2 Kargo numarası parçasıyla bul | stock wall 363 meta+eng 107.4 served 0 | smt wall 275 meta+eng 15.1 served 2 {'smt': True} 
+O3 Kargo numarası girilmemiş siparişler | stock wall 259 meta+eng 14.9 served 0 | smt wall 263 meta+eng 13.8 served 2 {'smt': False} {'stock': "c383143ab7 ['122 items']20", 'smt': "64db9da000 ['122 items']20"}
+O4 Teslim tarihi bu hafta | stock wall 422 meta+eng 67.1 served 0 | smt wall 312 meta+eng 17.3 served 2 {'smt': False} {'smt': "1d52ea19ca ['365 items']20", 'stock': "e358802397 ['365 items']20"}
+L1 Müşterinin siparişleri | stock wall 300 meta+eng 20.2 served 0 | smt wall 274 meta+eng 12.9 served 1 {'smt': True} 
+L2 Sipariş arama | stock wall 394 meta+eng 73.9 served 0 | smt wall 334 meta+eng 13.9 served 1 {'smt': True} 
+L3 Tutara göre sırala | stock wall 258 meta+eng 37.5 served 0 | smt wall 233 meta+eng 8.3 served 2 {'smt': True} 
+L4 Kaynağına göre süz | stock wall 263 meta+eng 39.2 served 0 | smt wall 234 meta+eng 8.3 served 2 {'smt': True} 
+L5 5 müşterinin toplam harcaması | stock wall 219 meta+eng 87.5 served 0 | smt wall 135 meta+eng 7.3 served 5 {'smt': True} 
+L6 E-posta ile sipariş bul | stock wall 142 meta+eng 15.0 served 0 | smt wall 137 meta+eng 4.3 served 1 {'smt': True} 
+W1 40 ürünün stok ve maliyetini güncelle | stock wall 401 meta+eng 42.8 served 0 | smt wall 413 meta+eng 42.3 served 0 {'smt': True} 
+K1 Ürün listesi (meta süzgeci yok) | stock wall 350 meta+eng 22.6 served 0 | smt wall 341 meta+eng 20.9 served 0 {'smt': True} 
+K2 Sipariş listesi (HPOS) | stock wall 207 meta+eng 10.4 served 0 | smt wall 202 meta+eng 10.5 served 0 {'smt': True} 
+K3 Ürün adı ve SKU arama | stock wall 630 meta+eng 12.7 served 0 | smt wall 639 meta+eng 12.5 served 0 {'smt': True} 

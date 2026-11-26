@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<ruleset name="SpeedUp Meta Tables">
+	<description>WordPress Coding Standards for the plugin code that ships.</description>
+	<file>speedup-meta-tables.php</file>
+	<file>uninstall.php</file>
+	<file>includes</file>
+	<arg name="extensions" value="php"/>
+	<arg value="sp"/>
+	<config name="testVersion" value="8.0-"/>
+	<config name="minimum_wp_version" value="6.4"/>
+	<rule ref="WordPress"/>
+	<rule ref="PHPCompatibilityWP"/>
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="speedup-meta-tables"/>
+			</property>
+		</properties>
+	</rule>
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<properties>
+			<property name="prefixes" type="array">
+				<element value="speedup_meta_tables"/>
+				<element value="SpeedUp_Meta_Tables"/>
+			</property>
+		</properties>
+	</rule>
+</ruleset>

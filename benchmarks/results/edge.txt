@@ -1,0 +1,7 @@
+ok   FOUND_ROWS after an empty answered page belongs to the next query (25002 vs 25002)
+ok   write with a leading comment is noted (notes: 1)
+ok   BINARY cast is not parsed
+ok   a second wpdb object is not rewritten (same SQL)
+ok   the site wpdb is rewritten
+ok   repair compares every object and empties the queue (267032 compared, 0 left)
+all passed

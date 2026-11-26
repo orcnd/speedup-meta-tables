@@ -1,0 +1,39 @@
+P1   q2    | stock wall     21.58 cpu     21.35 eng   0.00 | smt   wall      0.46 cpu      0.45 eng   0.11
+P2   q2    | stock wall     73.62 cpu     73.61 eng   0.00 | smt   wall      0.65 cpu      0.64 eng   0.12
+P3   q2    | stock wall   3090.42 cpu   1934.75 eng   0.00 | smt   wall      3.40 cpu      2.21 eng   0.39
+P4   q2    | stock wall   3258.49 cpu   1895.78 eng   0.00 | smt   wall      8.48 cpu      3.46 eng   0.79
+P5   q2    | stock wall    136.81 cpu    134.02 eng   0.00 | smt   wall      0.45 cpu      0.44 eng   0.13
+P6   q2    | stock wall    165.65 cpu    162.54 eng   0.00 | smt   wall      0.48 cpu      0.46 eng   0.13
+P7   q2    | stock wall  33242.75 cpu  31719.87 eng   0.00 | smt   wall      0.35 cpu      0.35 eng   0.07
+P8   q2    | stock wall     88.24 cpu     87.03 eng   0.00 | smt   wall      0.57 cpu      0.55 eng   0.14 MISS 1
+P9   q2    | stock wall   1175.91 cpu   1150.21 eng   0.00 | smt   wall      0.85 cpu      0.84 eng   0.17 MISS 1
+P10  q2    | stock wall    862.47 cpu    824.42 eng   0.00 | smt   wall      0.94 cpu      0.72 eng   0.21
+P11  q2    | stock wall     75.91 cpu     75.21 eng   0.00 | smt   wall      1.86 cpu      1.86 eng   0.23 MISS 1
+P12  q2    | stock wall    101.72 cpu    101.01 eng   0.00 | smt   wall      0.55 cpu      0.54 eng   0.14
+P13  q2    | stock wall     80.87 cpu     80.59 eng   0.00 | smt   wall      0.43 cpu      0.41 eng   0.13 MISS 1
+P14  q2    | stock wall    221.56 cpu    202.65 eng   0.00 | smt   wall      2.92 cpu      2.90 eng   0.18 MISS 1
+P15  q100  | stock wall   7017.55 cpu   6797.12 eng   0.00 | smt   wall      4.41 cpu      4.09 eng   0.40
+P16  q2    | stock wall    781.72 cpu    740.20 eng   0.00 | smt   wall      0.94 cpu      0.90 eng   0.16
+P17  q1    | stock wall    771.07 cpu    759.85 eng   0.00 | smt   wall      1.51 cpu      1.51 eng   0.16
+P18  q3    | stock wall    442.86 cpu    433.96 eng   0.00 | smt   wall      0.66 cpu      0.65 eng   0.19
+P19  q1    | stock wall    885.34 cpu    875.74 eng   0.00 | smt   wall      1.24 cpu      1.02 eng   0.16
+P20  q2    | stock wall   1938.76 cpu   1891.83 eng   0.00 | smt   wall      1.95 cpu      1.93 eng   0.25
+C1   q2    | stock wall      5.92 cpu      5.91 eng   0.00 | smt   wall      0.33 cpu      0.32 eng   0.07
+C2   q2    | stock wall      5.94 cpu      5.93 eng   0.00 | smt   wall      0.35 cpu      0.34 eng   0.07 MISS 1
+U1   q2    | stock wall     52.65 cpu     52.61 eng   0.00 | smt   wall      5.32 cpu      0.74 eng   0.26 MISS 1
+U2   q2    | stock wall     98.52 cpu     94.40 eng   0.00 | smt   wall     24.11 cpu     18.37 eng   0.29 MISS 1
+U3   q2    | stock wall     77.83 cpu     77.73 eng   0.00 | smt   wall      0.52 cpu      0.50 eng   0.24 MISS 1
+U4   q2    | stock wall   1065.00 cpu   1052.35 eng   0.00 | smt   wall      0.59 cpu      0.59 eng   0.18
+U5   q2    | stock wall     58.17 cpu     57.52 eng   0.00 | smt   wall      0.37 cpu      0.36 eng   0.12
+U6   q12   | stock wall   1524.35 cpu   1412.86 eng   0.00 | smt   wall      1.18 cpu      1.15 eng   0.23
+M1   q2    | stock wall    143.81 cpu    143.67 eng   0.00 | smt   wall      1.50 cpu      1.49 eng   0.23 MISS 1
+O1   q2    | stock wall    308.57 cpu    306.19 eng   0.00 | smt   wall    126.18 cpu    124.72 eng   0.24
+O2   q2    | stock wall     76.17 cpu     75.66 eng   0.00 | smt   wall      0.95 cpu      0.94 eng   0.30
+O3   q2    | stock wall      2.60 cpu      2.59 eng   0.00 | smt   wall      0.25 cpu      0.24 eng   0.07
+O4   q2    | stock wall     35.59 cpu     35.52 eng   0.00 | smt   wall      0.79 cpu      0.78 eng   0.13
+L1   q2    | stock wall     12.25 cpu     12.24 eng   0.00 | smt   wall      0.30 cpu      0.29 eng   0.08 MISS 1
+L2   q1    | stock wall     81.52 cpu     76.31 eng   0.00 | smt   wall      0.96 cpu      0.95 eng   0.18
+L3   q2    | stock wall     31.29 cpu     30.55 eng   0.00 | smt   wall      0.33 cpu      0.32 eng   0.08
+L4   q2    | stock wall     32.44 cpu     31.69 eng   0.00 | smt   wall      0.64 cpu      0.63 eng   0.10
+L5   q5    | stock wall     72.78 cpu     72.37 eng   0.00 | smt   wall      0.46 cpu      0.44 eng   0.13
+L6   q1    | stock wall     11.59 cpu     11.58 eng   0.00 | smt   wall      0.24 cpu      0.24 eng   0.07

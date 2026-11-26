@@ -1,0 +1,10 @@
+dist/
+scratch/
+docs/ai/
+verify/.playground/
+.claude/settings.local.json
+.remember/
+.playwright-mcp/
+__pycache__/
+.DS_Store
+benchmarks/results/expected.json

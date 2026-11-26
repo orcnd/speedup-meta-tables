@@ -1,0 +1,23 @@
+== wptest Thu Nov 26 07:27:39 +03 2026
+855 comparisons, 0 differences, 792 answered by the tables, 63 by WordPress
+== rebuild (wptest switches a key off on purpose)
+Success: 8 tables in 111.8 s
+== race
+45 s: 10419 write rounds, 7869 reads (1121 sent to meta table), write median 0.17 ms p99 1.76 ms, left in queue 1, stale rows or counters 0
+== edge cases
+all passed
+== measurements
+start Thu Nov 26 07:42:01 +03 2026
+ 7:42  up 11 days, 18 mins, 1 user, load averages: 4.05 3.90 4.79
+vm.swapusage: total = 10240.00M  used = 9183.94M  free = 1056.06M  (encrypted)
+Success: 0 objects refreshed
+154 queries answered, 0 differences
+  not answered: L2 17 ms SELECT DISTINCT os.order_id FROM wp_wc_order_stats os INNER JOIN wp_wc_customer_lookup cl ON os.customer_id =  
+Success: 0 objects refreshed
+./benchmarks/harness/run-all.sh: line 20: 22334 Terminated: 15          php -d opcache.enable_cli=1 -d memory_limit=1G -d max_execution_time=300 -d error_reporting=0 -S 127.0.0.1:8099 -t www router.php > logs/php.log 2>&1
+./benchmarks/harness/run-all.sh: line 22: 33438 Terminated: 15          PHP_CLI_SERVER_WORKERS=4 php -d opcache.enable_cli=1 -d memory_limit=1G -d max_execution_time=300 -d error_reporting=0 -S 127.0.0.1:8099 -t www router.php > logs/php.log 2>&1
+end Thu Nov 26 08:05:35 +03 2026
+ 8:05  up 11 days, 42 mins, 1 user, load averages: 15.27 10.06 7.26
+vm.swapusage: total = 9216.00M  used = 8190.12M  free = 1025.88M  (encrypted)
+== done Thu Nov 26 08:05:35 +03 2026
+FINISHED

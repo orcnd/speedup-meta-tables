@@ -1,0 +1,40 @@
+{
+    "meta_update_ms": 0.98,
+    "note_ms": 0.044,
+    "read_with_waiting": {
+        "0": {
+            "ms": 0.255,
+            "answered": true
+        },
+        "1": {
+            "ms": 15.92,
+            "answered": true
+        },
+        "10": {
+            "ms": 23.217,
+            "answered": true
+        },
+        "50": {
+            "ms": 44.654,
+            "answered": true
+        },
+        "200": {
+            "ms": 25.331,
+            "answered": false
+        }
+    },
+    "refresh": {
+        "1": {
+            "first": 8.597,
+            "warm": 5.303
+        },
+        "12": {
+            "first": 40.105,
+            "warm": 16.336
+        },
+        "40": {
+            "first": 63.513,
+            "warm": 38.52
+        }
+    }
+}
